@@ -1,58 +1,62 @@
+# Harmony Jekyll theme general configurations 
 
-# SEO settings
-title: "peterjcaulfield.github.io"
-description: "Just another minimalist Jekyll theme that focuses on technical writing."
-keywords: "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
-url: http://peterjcaulfield.github.io # site url
-baseurl: null # apply repo name if use it under gh-pages branch
-# baseurl: null # apply null if repo name is something like username.github.io
+# Base URL
+baseurl: null
 
-google_analytics: UA-XXXXX-XX
-repo: http://github.com/peterjcaulfield/peterjcaulfield.github.io
-disqus_shortname: ""
-twitter_username: ""
-comments: true
+# Site live URL
+#url: http://peterjcaulfield.github.io
 
-# Build settings
-permalink   : /:year/:title/
-markdown    : kramdown
-highlighter : rouge
+# Localhost 
+url: http://127.0.0.1:4000  
 
-source: ./
-destination: ./_site
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: peterjcaulfield.github.io
+  # Little description about your site
+  description: 
+  # 'meta_description:' Write an awesome description for your new site here.
+  # It will appear in your document head meta (for Google search results) and 
+  # in your feed.xml site description.
+  meta_description: > # 
+      Website of Peter Caulfield, fullstack coder
+  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
+  author: # Author details
+    name: Peter Caulfield
+    email: peterjcaulfield@gmail.com
+    url: http://peterjcaulfield.github.io
 
-# Sass configuration
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-xxxx-x
+
+  # Profile links, leave blank to ignore
+  social: 
+    github: peterjcaulfield
+    twitter: 
+    facebook: 
+    gplus: 
+    dribble: 
+    pinterest: 
+  # Toggle disclaimer in footer
+  show_disclaimer: false
+
+# Conversion / Build settings 
+markdown:    kramdown
+# This is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: pygments 
+
+# Permalinks
+permalink:        pretty
+
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
 sass:
-  sass_dir: assets/scss
-  style: compressed # expanded
-
-# Author settings
-author:
-  name     : "Peter Caulfield"
-  job      : "builder of things"
-  bio      : "Currently enjoying adventures in startup land."
-  thumb    : /images/author.jpg
-  email    : peterjcaulfield@gmail.com
-  url      : http://peterjcaulfield.github.io
-  github   : http://github.com/peterjcaulfield
-  #twitter  : 
-  #facebook : 
-  linkedin : https://ie.linkedin.com/in/peter-caulfield-00595854
-
-# social settings
-#og_locale: "en_US"
-#twitter_card: "summary_large_image"
-#twitter_site: ""
-
-gems:
-  - bourbon
-  - jekyll-paginate
-
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
-
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+    sass_dir: assets/css/_sass
+    style: :compressed
