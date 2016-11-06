@@ -4,14 +4,14 @@
 baseurl: null
 
 # Site live URL
-url: http://peterjcaulfield.github.io
+url: http://emergent.systems
 
 # Localhost 
 #url: http://127.0.0.1:4000  
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
-  name: peterjcaulfield.github.io
+  name: Emergent Systems
   # Little description about your site
   description: 
   # 'meta_description:' Write an awesome description for your new site here.
@@ -23,7 +23,7 @@ harmony:
   author: # Author details
     name: Peter Caulfield
     email: peterjcaulfield@gmail.com
-    url: http://peterjcaulfield.github.io
+    url: http://emergent.systems
 
   # Google Analytics key, leave blank to ignore
   google_analytics_key: UA-xxxx-x
